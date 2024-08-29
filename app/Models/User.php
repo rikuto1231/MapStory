@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -10,6 +9,27 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
+    /**
+     * The primary key associated with the table.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'user_id';
+
+    /**
+     * The data type of the primary key.
+     *
+     * @var string
+     */
+    protected $keyType = 'int';
+
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = true;
 
     /**
      * The attributes that are mass assignable.
