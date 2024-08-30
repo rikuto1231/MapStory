@@ -31,8 +31,16 @@ class Post extends Model
         return $this->hasMany(Bookmark::class,'post_id','post_id');
     }
 
+    // PostとTagのリレーションテーブル
     public function tag(){
-        
+        return $this->belongsToMany(Tag::class,'labels','post_id','tag_id')
+        ->withTimestamps();
+    }
+
+    // PostとHistoryのリレーションテーブル
+    public function history(){
+        return $this->belongsToMany(History::class, 'records', 'post_id', 'history_id')
+        ->withTimestamps();
     }
 
 }
