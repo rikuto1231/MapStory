@@ -15,7 +15,7 @@ class Record extends Model
 
     protected $keyType = 'int';
 
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'post_id',
