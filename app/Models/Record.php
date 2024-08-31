@@ -19,6 +19,7 @@ class Record extends Model
 
     protected $fillable = [
         'post_id',
+        'user_id',
         'history_id',
     ];
 
@@ -28,6 +29,11 @@ class Record extends Model
     public function post()
     {
         return $this->belongsTo(Post::class, 'post_id', 'post_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'user_id');
     }
 
     /**

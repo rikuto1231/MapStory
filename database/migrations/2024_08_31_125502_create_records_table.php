@@ -14,10 +14,13 @@ return new class extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->integer('record_id')->autoIncrement();
             $table->integer('post_id');
+            $table->integer('user_id');
             $table->integer('history_id');
             $table->timestamps();
 
             $table->foreign('post_id')->references('post_id')->on('posts')->onDelete('cascade');
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+
             $table->foreign('history_id')->references('history_id')->on('histories')->onDelete('cascade');
 
         });
