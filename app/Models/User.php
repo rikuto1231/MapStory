@@ -78,7 +78,7 @@ class User extends Authenticatable
     }
 
     public function record(){
-        return $this->belongsToMany(Records::class, 'records', 'user_id', 'record_id')
+        return $this->belongsToMany(Record::class, 'records', 'user_id', 'record_id')
         ->withTimestamps();
     }
 
