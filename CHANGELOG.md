@@ -2,7 +2,7 @@
 
 ## [Unreleased](https://github.com/laravel/laravel/compare/v11.1.3...11.x)
 
-## [v11.1.3](https://github.com/laravel/laravel/compare/v11.1.2...v11.1.3) - 2024-07-03
+## [v10.3.3](https://github.com/laravel/laravel/compare/v10.3.2...v10.3.3) - 2024-02-13
 
 * [11.x] Comment maintenance store by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/laravel/pull/6429
 
