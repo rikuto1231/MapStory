@@ -15,7 +15,7 @@ return new class extends Migration
             $table->integer('bookmark_id')->autoIncrement();            
             $table->integer('user_id');
             $table->integer('post_id');
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
             $table->foreign('post_id')->references('post_id')->on('posts')->onDelete('cascade');
